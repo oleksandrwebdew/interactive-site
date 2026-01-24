@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: #222;
+  color: #fff;
+}
+
+.menu a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+/* ===== BURGER ===== */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+}
+
+/* ===== SLIDER ===== */
+.slider {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.slides img {
+  display: none;
+  width: 100%;
+}
+
+.slides img.active {
+  display: block;
+}
+
+/* ===== MODAL ===== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
