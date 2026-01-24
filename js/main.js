@@ -26,13 +26,38 @@ document.getElementById("prev").onclick = () => {
 };
 
 // MODAL
+
 const modal = document.getElementById("modal");
 const openModal = document.getElementById("openModal");
-const closeModal = document.getElementById("closeModal");
 
-openModal.onclick = () => modal.style.display = "flex";
-closeModal.onclick = () => modal.style.display = "none";
+const closeButtons = document.querySelectorAll(
+  ".close, .modal-btn-close"
+);
 
-modal.addEventListener("click", e => {
-  if (e.target === modal) modal.style.display = "none";
+// 2️⃣ Открытие модалки
+openModal.addEventListener("click", () => {
+  modal.classList.add("active");
 });
+
+// 3️⃣ Закрытие по кнопкам
+closeButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
+});
+
+// 4️⃣ Закрытие по клику на фон
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.remove("active");
+  }
+});
+
+// 5️⃣ Закрытие по ESC (ПОСЛЕДНИМ)
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && modal.classList.contains("active")) {
+    modal.classList.remove("active");
+  }
+});
+
+

@@ -5,8 +5,8 @@
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  background: #f9fafb;
-  color: #111;
+  background: #ffffff;
+  color: #1f2933;
 }
 
 /* HEADER */
@@ -15,7 +15,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 16px 24px;
-  background: #fff;
+  background: #1f2933;
+  color: #ffffff;
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -31,7 +32,7 @@ body {
 
 .menu a {
   text-decoration: none;
-  color: #111;
+  color: #fff;
 }
 
 /* BURGER */
@@ -45,7 +46,7 @@ body {
 .burger span {
   width: 24px;
   height: 3px;
-  background: #111;
+  background: #fff;
 }
 
 /* MODAL BUTTON */
@@ -104,6 +105,7 @@ body {
 #next { right: 10px; }
 
 /* MODAL */
+
 .modal {
   display: none;
   position: fixed;
@@ -113,8 +115,14 @@ body {
   align-items: center;
 }
 
+.modal.active {
+  display: flex;
+}
+
+
 .modal-content {
-  background: #fff;
+  background: #1f2933;
+  color: #fff;
   padding: 24px;
   border-radius: 10px;
   position: relative;
@@ -122,11 +130,28 @@ body {
   max-width: 400px;
 }
 
+.modal-btn-close {
+  margin-top: 20px;
+  padding: 10px 20px;
+
+  background: #3a3c40;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.modal-btn-close:hover {
+  background: #515865;
+}
+
 .close {
   position: absolute;
   top: 10px;
   right: 12px;
-  background: none;
+  background: #fff;
   border: none;
   font-size: 22px;
   cursor: pointer;
