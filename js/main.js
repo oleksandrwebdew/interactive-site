@@ -1,4 +1,4 @@
-// ===== Бургер =====
+// BURGER MENU
 const burger = document.getElementById("burger");
 const menu = document.getElementById("menu");
 
@@ -6,13 +6,13 @@ burger.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
 
-// ===== Слайдер =====
+// SLIDER
 const slides = document.querySelectorAll(".slides img");
 let index = 0;
 
-function showSlide(i) {
+function showSlide(n) {
   slides.forEach(slide => slide.classList.remove("active"));
-  slides[i].classList.add("active");
+  slides[n].classList.add("active");
 }
 
 document.getElementById("next").onclick = () => {
@@ -25,32 +25,14 @@ document.getElementById("prev").onclick = () => {
   showSlide(index);
 };
 
-setInterval(() => {
-  index = (index + 1) % slides.length;
-  showSlide(index);
-}, 5000);
-
-// ===== Модальное окно =====
+// MODAL
 const modal = document.getElementById("modal");
 const openModal = document.getElementById("openModal");
 const closeModal = document.getElementById("closeModal");
 
-openModal.onclick = () => {
-  modal.style.display = "flex";
-  document.body.style.overflow = "hidden";
-};
+openModal.onclick = () => modal.style.display = "flex";
+closeModal.onclick = () => modal.style.display = "none";
 
-function close() {
-  modal.style.display = "none";
-  document.body.style.overflow = "";
-}
-
-closeModal.onclick = close;
-
-modal.onclick = e => {
-  if (e.target === modal) close();
-};
-
-document.addEventListener("keydown", e => {
-  if (e.key === "Escape") close();
+modal.addEventListener("click", e => {
+  if (e.target === modal) modal.style.display = "none";
 });
