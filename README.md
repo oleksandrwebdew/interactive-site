@@ -11,6 +11,10 @@ Interactive website with dynamic UI elements built using HTML, CSS and JavaScrip
 - HTML5
 - CSS3
 - Vanilla JavaScript
+## Scrinshot
+<p>
+  <img src="./screenshots/interactive-site.png" width="300" />
+</p>
 
 ## Live demo
 https://oleksandrwebdew.github.io/interactive-website/
