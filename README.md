@@ -13,7 +13,7 @@ Interactive website with dynamic UI elements built using HTML, CSS and JavaScrip
 - Vanilla JavaScript
 ## Preview
 <p>
-  <img src="./screenshots/interactive-site.png" width="300" />
+  <img src="./screenshots/portfolio_projects_interactive-site.png" width="300" />
 </p>
 
 ## Live demo
